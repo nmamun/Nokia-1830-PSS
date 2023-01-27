@@ -21,7 +21,6 @@ pss_pre_login = 'AAA'                                                           
 
 # ========= Functions ==========================================
 
-
 # ==============================================================
 
 # ========== Main Function =====================================
@@ -32,9 +31,7 @@ def main():
     domain_user_name = input("User Name: ")
     pass_word = getpass.getpass("Password: ")
     print("\n" + "#" * 80)
-
     
-
     session = paramiko.SSHClient()                                                  # define paramiko client
     session.set_missing_host_key_policy(paramiko.AutoAddPolicy())                   # host key auto add policy
 
@@ -61,8 +58,6 @@ def main():
         print(terminal_output.decode())                                             # print command outputs
 
     session.close()                                                                 # close session
-
-
 # ==============================================================
 
 if __name__ == "__main__":
