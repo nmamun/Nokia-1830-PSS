@@ -46,8 +46,6 @@ def main():
     open_shell.send(pass_word + "\n")                                               # send password for the user
     time.sleep(1)
 
-    terminal_output = open_shell.recv(65000)
-    print(terminal_output.decode()) 
     open_shell.send("Y" + "\n")                                                     # response to prompt 'Do you acknowledge? (Y/N)?'
     time.sleep(1)
 
