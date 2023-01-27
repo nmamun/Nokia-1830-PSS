@@ -41,7 +41,7 @@ def main():
     session.connect(hostname=ip_address, username=pss_pre_login, password="")       # first connection as default ssh user with no password
     time.sleep(2)
     
-    open_shell = session.invoke_shell()                                             # inovking shell to send commands/inputs
+    open_shell = session.invoke_shell()                                             # invoking shell to send commands/inputs
     time.sleep(2)
     
     open_shell.send(domain_user_name + "\n")                                        # send user name collected from the prompt
