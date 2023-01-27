@@ -16,6 +16,7 @@ import time
 # ========= Variables ==========================================
 terminal_output = ''                                                                # variable to keep command outputs
 cli_commands_sent = ["show version","alm","show general date","logout"]             # list of cli commands to be sent
+pss_pre_login = 'AAA'                                                               # default username for ssh connection (PSS users know)eeee   b
 # ==============================================================
 
 # ========= Functions ==========================================
@@ -37,7 +38,7 @@ def main():
     session = paramiko.SSHClient()                                                  # define paramiko client
     session.set_missing_host_key_policy(paramiko.AutoAddPolicy())                   # host key auto add policy
 
-    session.connect(hostname=ip_address, username='cli', password="")               # first connection as 'cli' user with no password
+    session.connect(hostname=ip_address, username=pss_pre_login, password="")       # first connection as default ssh user with no password
     time.sleep(2)
     
     open_shell = session.invoke_shell()                                             # inovking shell to send commands/inputs
@@ -63,7 +64,6 @@ def main():
 
 
 # ==============================================================
-
 
 if __name__ == "__main__":
     main()
