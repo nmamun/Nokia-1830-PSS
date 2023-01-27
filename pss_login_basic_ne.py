@@ -19,7 +19,7 @@ cli_commands_sent = ["show version","alm","show general date","logout"]         
 pss_pre_login = 'AAA'                                                               # default username for ssh connection (Change 'AAA' to default -PSS users know!!)
 # ==============================================================
 
-# ========= Functions ==========================================
+# ========= Classes & Functions ================================
 
 # ==============================================================
 
