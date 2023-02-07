@@ -81,7 +81,7 @@ def main():
     pass_word = getpass.getpass("Password: ")
     print("\n" + "#" * 80)
 
-    pss_connection = SshConnection(ip_address, user_name='cli', pass_word="")
+    pss_connection = SshConnection(ip_address, user_name='BBB', pass_word="")                                   # replace user name with PSS SSH user name
 
     if (pss_connection.session_status):                                                                         # proceed if ssh connection has been established, 
         pss_connection.open_shell()                                                                             # any exception will set session_status variable set to False
@@ -103,7 +103,6 @@ def main():
 
     else:
         pss_connection.close_connection()                                                                       # close session
-
 
 # ==============================================================
 
